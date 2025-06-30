@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya Singh Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: white;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: #1f1f1f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+    }
+
+    #qualities {
+      font-size: 1.5em;
+      color: #00bcd4;
+      height: 30px;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    section {
+      padding: 50px 20px;
+      border-bottom: 1px solid #333;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #ff9800;
+      margin-bottom: 20px;
+      font-size: 2em;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: #ff9800;
+    }
+
+    .profile-photo {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #00bcd4;
+      box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+      transition: transform 0.3s;
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.05);
+    }
+
+    .project, .education-item {
+      margin-bottom: 20px;
+    }
+
+    .project ul li, .education-item p {
+      margin-bottom: 8px;
+    }
+
+    .contact a {
+      color: #03a9f4;
+      text-decoration: none;
+      display: block;
+      margin: 5px 0;
+      transition: color 0.3s ease;
+    }
+
+    .contact a:hover {
+      color: #ff9800;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Aditya Singh</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Aditya Singh</h1>
+      <div id="qualities">Passionate Developer</div>
+  </header>
+
+  <div class="container">
+    
+    <section id="intro" style="height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:#1f1f1f; animation: fadeInDown 1.5s ease-in-out;">
+      <h2 style="font-size:2.5em; color:#ff9800; margin-bottom:10px;">HELLO</h2>
+      <h1 style="font-size:3em; margin-bottom:20px;">I am <span style="color:#03a9f4;">ADITYA SINGH</span></h1>
+      <div style="margin-top:30px; display:flex; gap:30px; justify-content:center;">
+  <a href="https://github.com/Adityas4455" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" style="width:40px; height:40px; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+  </a>
+  <a href="https://leetcode.com/Aditya4455" target="_blank">
+    <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/ffffff/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png" alt="LeetCode" style="width:40px; height:40px; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+  </a>
+  <a href="https://www.linkedin.com/in/aditya-singh-887823260/" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" style="width:40px; height:40px; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+    
+  </a>
+  <br><br>
+
+</div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="profile.jpg" alt="Aditya Singh" class="profile-photo">
+      <p>I am a passionate and highly motivated Computer Science undergraduate with a strong academic foundation and practical experience in full-stack web development, competitive programming, and data-driven solutions.</p>
+      <p>I have worked on diverse projects including food delivery platforms, travel systems, and stock prediction models, all of which demonstrate my ability to build impactful, scalable, and user-centric applications.</p>
+      <p>I thrive in team environments and love tackling algorithmic challenges on platforms like LeetCode and GeeksforGeeks. Currently, I'm exploring machine learning to broaden my technical skill set and apply intelligent solutions to real-world problems.</p>
+      <p>Beyond coding, I'm a quick learner, excellent communicator, and detail-oriented developer who enjoys designing clean, responsive interfaces and delivering elegant technical solutions.</p>
+    </section>
+
+    <section id="education">
+  <h2 style="text-align:center; font-size:2.5em;">📘 Education</h2>
+  <div style="display:flex; flex-direction:column; align-items:center; gap:20px; margin-top:30px;">
+    <div style="background:#1f1f1f; border-radius:12px; padding:20px; width:100%; max-width:700px; box-shadow:0 0 15px rgba(0,0,0,0.4); position:relative;">
+      <div style="position:absolute; left:50%; top:20px; width:12px; height:12px; background:#7e57c2; border-radius:50%; transform:translateX(-50%);"></div>
+      <h3><img src="https://img.icons8.com/fluency-systems-filled/24/ffffff/school.png" style="vertical-align:middle; margin-right:10px;"/>Class 10th</h3>
+      <p style="color:#bbb; margin-bottom:5px;">Jingle Bell Academy</p>
+      <p style="color:#aaa; font-size:0.9em;"><img src='https://img.icons8.com/ios-filled/20/ffffff/calendar--v1.png' style='vertical-align:middle; margin-right:6px;'/> 2020</p>
+      <p style="margin-top:10px;"><strong>Core Subjects:</strong> Math, Science, English</p>
+      <p><strong>Grade:</strong> 86.3%</p>
+    </div>
+
+    <div style="background:#1f1f1f; border-radius:12px; padding:20px; width:100%; max-width:700px; box-shadow:0 0 15px rgba(0,0,0,0.4); position:relative;">
+      <div style="position:absolute; left:50%; top:20px; width:12px; height:12px; background:#7e57c2; border-radius:50%; transform:translateX(-50%);"></div>
+      <h3><img src="https://img.icons8.com/fluency-systems-filled/24/ffffff/school.png" style="vertical-align:middle; margin-right:10px;"/>Class 12th</h3>
+      <p style="color:#bbb; margin-bottom:5px;">Jingle Bell Academy</p>
+      <p style="color:#aaa; font-size:0.9em;">📅 2022</p>
+      <p style="margin-top:10px;"><strong>Core Subjects:</strong> Physics, Chemistry, Math</p>
+      <p><strong>Grade:</strong> 90.3%</p>
+    </div>
+
+    <div style="background:#1f1f1f; border-radius:12px; padding:20px; width:100%; max-width:700px; box-shadow:0 0 15px rgba(0,0,0,0.4); position:relative;">
+      <div style="position:absolute; left:50%; top:20px; width:12px; height:12px; background:#7e57c2; border-radius:50%; transform:translateX(-50%);"></div>
+      <h3><img src="https://img.icons8.com/ios-filled/24/ffffff/graduation-cap.png" style="vertical-align:middle; margin-right:10px;"/>College</h3>
+      <p style="color:#bbb; margin-bottom:5px;">Graphic Era Hill University, Dehradun</p>
+      <p style="color:#aaa; font-size:0.9em;">📅 2022 – 2026</p>
+      <p style="margin-top:10px;"><strong>Core Subjects:</strong> DSA, OOPs, DBMS, OS, Computer Architecture</p>
+      <p><strong>CGPA:</strong> 7.78</p>
+    </div>
+  </div>
+</section>
+
+    <section id="projects">
+  <h2 style="text-align:center; font-size:2.5em;">💻 Projects</h2>
+  <div style="display:flex; flex-direction:column; align-items:center; gap:30px; margin-top:30px;">
+
+    <div style="background:#1f1f1f; border-radius:12px; padding:25px; width:100%; max-width:800px; box-shadow:0 0 15px rgba(0,0,0,0.4);">
+      <h3 style="display:flex; align-items:center; gap:10px;"><img src="https://img.icons8.com/ios-filled/30/ffffff/code.png"/>Food Delivery Website</h3>
+      <p style="color:#bbb; margin-top:8px;">Tech Stack: React, Redux Toolkit, Tailwind CSS</p>
+      <ul style="margin-top:10px;">
+        <li>Live restaurant data with Swiggy API, dynamic cart.</li>
+        <li><a href="https://github.com/Adityas4455/food-delivery-app" target="_blank" style="color:#03a9f4; text-decoration:none;">🔗 View on GitHub</a></li>
+        <li><a href="https://aditya-food-app-demo.netlify.app" target="_blank" style="color:#ff9800; text-decoration:none;">🚀 Live Demo</a></li>
+        <li><img src="https://img.shields.io/github/stars/Adityas4455/food-delivery-app?style=social" alt="GitHub stars"></li>
+        <li>Infinite scrolling and user online check.</li>
+        <li>Optimized performance with Vite (99 Google Lighthouse score).</li>
+      </ul>
+    </div>
+
+    <div style="background:#1f1f1f; border-radius:12px; padding:25px; width:100%; max-width:800px; box-shadow:0 0 15px rgba(0,0,0,0.4);">
+      <h3 style="display:flex; align-items:center; gap:10px;"><img src="https://img.icons8.com/ios-filled/30/ffffff/web.png"/>Travel Management System</h3>
+      <p style="color:#bbb; margin-top:8px;">Tech Stack: HTML, CSS, JavaScript, PHP</p>
+      <ul style="margin-top:10px;">
+        <li>MySQL-based backend for user and booking management.</li>
+        <li><a href="https://github.com/Adityas4455/travel-management-system" target="_blank" style="color:#03a9f4; text-decoration:none;">🔗 View on GitHub</a></li>
+        <li><a href="https://aditya-travel-system-demo.netlify.app" target="_blank" style="color:#ff9800; text-decoration:none;">🚀 Live Demo</a></li>
+        <li><img src="https://img.shields.io/github/stars/Adityas4455/travel-management-system?style=social" alt="GitHub stars"></li>
+        <li>User-friendly UI and secure input validation.</li>
+      </ul>
+    </div>
+
+    <div style="background:#1f1f1f; border-radius:12px; padding:25px; width:100%; max-width:800px; box-shadow:0 0 15px rgba(0,0,0,0.4);">
+      <h3 style="display:flex; align-items:center; gap:10px;"><img src="https://img.icons8.com/ios-filled/30/ffffff/artificial-intelligence.png"/>Stock Prediction</h3>
+      <p style="color:#bbb; margin-top:8px;">Tech Stack: Python, Scikit-learn, Pandas, Matplotlib</p>
+      <ul style="margin-top:10px;">
+        <li>Built a model predicting stock prices with 85%+ accuracy.</li>
+        <li><a href="https://github.com/Adityas4455/stock-predictor" target="_blank" style="color:#03a9f4; text-decoration:none;">🔗 View on GitHub</a></li>
+        <li><a href="https://aditya-stock-predictor-demo.netlify.app" target="_blank" style="color:#ff9800; text-decoration:none;">🚀 Live Demo</a></li>
+        <li><img src="https://img.shields.io/github/stars/Adityas4455/stock-predictor?style=social" alt="GitHub stars"></li>
+        <li>Visualized trends and forecasts with an interactive dashboard.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+  </div>
+
+    <section id="contact">
+  <h2 style="text-align:center; font-size:2.5em;">Contact Me</h2>
+  <p style="text-align:center; color:gray; margin-top:-15px; font-size:1.1em;">Below are the details to reach out to me!</p>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:40px; margin-top:40px;">
+
+    <div style="text-align:center;">
+      <div style="background:#222; border-radius:50%; padding:20px;">
+        <img src="https://img.icons8.com/ios-filled/50/ff9800/marker.png" alt="address icon"/>
+      </div>
+      <p style="margin:10px 0 5px; font-weight:bold;">ADDRESS</p>
+      <p>Ayodhya, UP</p>
+    </div>
+
+    <div style="text-align:center;">
+      <div style="background:#222; border-radius:50%; padding:20px;">
+        <img src="https://img.icons8.com/ios-filled/50/ff9800/phone.png" alt="phone icon"/>
+      </div>
+      <p style="margin:10px 0 5px; font-weight:bold;">CONTACT NUMBER</p>
+      <p><a href="tel:+919936055455" style="color:#03a9f4; text-decoration:none;">+91 99360 55455</a></p>
+    </div>
+
+    <div style="text-align:center;">
+      <div style="background:#222; border-radius:50%; padding:20px;">
+        <img src="https://img.icons8.com/ios-filled/50/ff9800/send-mass-email.png" alt="email icon"/>
+      </div>
+      <p style="margin:10px 0 5px; font-weight:bold;">EMAIL ADDRESS</p>
+      <p><a href="mailto:siddhiaditya01@gmail.com" style="color:#03a9f4; text-decoration:none;">siddhiaditya01@gmail.com</a></p>
+    </div>
+
+    <div style="text-align:center;">
+      <div style="background:#222; border-radius:50%; padding:20px;">
+        <img src="https://img.icons8.com/ios-filled/50/ff9800/domain.png" alt="download icon"/>
+      </div>
+      <p style="margin:10px 0 5px; font-weight:bold;">DOWNLOAD RESUME</p>
+      <p><a href="resume.pdf" download style="color:#03a9f4; text-decoration:none;">Click Here</a></p>
+    </div>
+
+  </div>
+</section>
+
+  </div>
+
+  <script>
+    const qualities = ["Passionate Developer", "Problem Solver", "Fast Learner"];
+    let index = 0;
+    setInterval(() => {
+      document.getElementById("qualities").textContent = qualities[index];
+      index = (index + 1) % qualities.length;
+    }, 1000);
+
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
